@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="add.css">
+  <link rel="shortcut icon" type="x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCjpVpmsE9MZIJ6kf2aFMRZPmAzfmY84NheA&s">
+</head>
+<body>
+  <div class="header">
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="store.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="add.html">Add Product</a></li>
+        </ul>
+      </nav>
+      <div class="app-title" style="color: aliceblue;font-size: 1.2em; font-weight: 550; margin-right:20px;">Inventory Management</div>
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCjpVpmsE9MZIJ6kf2aFMRZPmAzfmY84NheA&s" alt="Inventory Logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Add New Product</h1>
+    <form id="addProductForm">
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" placeholder="ENTER PRODUCT NAME" autocomplete="off" required>
+
+      <label for="image">Product Image URL:</label>
+      <input type="url" id="image" name="image" placeholder="ENTER IMAGE URL" autocomplete="off" required>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" placeholder="ENTER PRICE" min="0" autocomplete="off" required>
+
+      <label for="stock">Stock:</label>
+      <input type="number" id="stock" name="stock" placeholder="ENTER STOCK" min="0" autocomplete="off" required>
+
+      <label for="tags">Tags (Comma-Separated):</label>
+      <input type="text" id="tags" name="tags" placeholder="ENTER TAGS" autocomplete="off" required>
+
+      <button type="submit"><strong>Add Product</strong></button>
+    </form>
+
+    <div class="success-message" id="successMessage" style="display:none;">
+      ✅ Product added successfully!
+    </div>
+  </div>
+
+  <script src="add.js" ></script>
+</body>
+</html>

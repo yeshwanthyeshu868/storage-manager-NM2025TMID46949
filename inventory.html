@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory</title>
+  <link rel="stylesheet" href="inventory.css">
+  <link rel="shortcut icon" type="x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCjpVpmsE9MZIJ6kf2aFMRZPmAzfmY84NheA&s">
+</head>
+<body>
+  <!-- Navbar (unchanged) -->
+  <div class="header">
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="store.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="add.html">Add Product</a></li>
+        </ul>
+      </nav>
+      <div class="app-title" style="color: aliceblue;font-size: 1.2em; font-weight: 550; margin-right:20px;">Inventory Management</div>
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCjpVpmsE9MZIJ6kf2aFMRZPmAzfmY84NheA&s" alt="Inventory Logo">
+      </div>
+    </div>
+        <h1 class="title">Inventory</h1>
+
+    <!-- Controls -->
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="🔍 Search product..." onkeyup="loadInventory()">
+      <label>
+        Alert below:
+        <input type="number" id="alertValue" value="" min="0" onchange="loadInventory()">
+      </label>
+      <label>Show only depleted
+        <input type="checkbox" id="showDepleted" onchange="loadInventory()"> 
+      </label>
+    </div>
+  </div>
+
+  <!-- Inventory -->
+  <div class="inventory-container">
+
+
+    <!-- Products -->
+    <div id="inventoryGrid" class="inventory-grid"></div>
+  </div>
+
+  <script src="inventory.js" >
+  </script>
+</body>
+</html>
